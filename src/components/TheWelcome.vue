@@ -1,3 +1,7 @@
+<script setup>
+import SocialPost from './molecules/SocialPost.vue';
+</script>
+
 <template>
-  <div></div>
+  <SocialPost/>
 </template>

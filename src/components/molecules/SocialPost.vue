@@ -26,7 +26,7 @@
   .name {
     font-weight: bold;
     margin-right: 8px;
-    color: white;
+    color: rgb(48, 10, 10);
   }
 }
 </style>
