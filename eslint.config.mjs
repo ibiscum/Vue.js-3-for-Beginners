@@ -11,6 +11,6 @@ export default defineConfig([
     extends: ["js/recommended"],
     languageOptions: { globals: globals.browser } 
   },
-  pluginVue.configs["flat/essential"],
+  pluginVue.configs["flat/recommended"],
   pluginCypress.configs.recommended,
 ]);

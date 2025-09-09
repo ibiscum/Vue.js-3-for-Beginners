@@ -1,15 +1,35 @@
 <template>
   <div class="SocialPost">
     <div class="header">
-      <img class="avatar" src="https://i.pravatar.cc/40" />
-      <div class="name">Name of User</div>
-      <div class="userId">@userId</div>
+      <img
+        class="avatar"
+        :src="avatarSrc"
+      >
+      <div class="name">
+        {{ username }}
+      </div>
+      <div class="userId">
+        {{ userId }}
+      </div>
     </div>
-    <div class="post">This is a dummy post</div>
+    <div class="post">
+      {{ post }}
+    </div>
   </div>
 </template>
 
-<script setup >
+<script setup>
+import { onMounted } from 'vue';
+
+const props = defineProps({
+  username: {type: String, default: 'John Doe'},
+  userId: {type: String, default: 'user01'},
+  avatarSrc: {type: String, default: 'https://i.pravatar.cc/40'},
+  post: {type: String, default: 'message'},
+});
+onMounted( () => {
+  console.log(props.username);
+});
 </script>
 
 <style lang="scss">
