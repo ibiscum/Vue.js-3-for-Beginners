@@ -2,5 +2,5 @@
 </script>
 
 <template>
-    <p>footer 2025</p>
+  <p>footer 2025</p>
 </template>
