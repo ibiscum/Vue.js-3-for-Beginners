@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="SocialPost" 
-    :class="{ SocialPost__selected: selected}"
-  >
+  <div class="SocialPost" :class="{ SocialPost__selected: selected }">
     <div class="header">
       <img class="avatar" :src="avatarSrc" />
       <div class="name">{{ username }}</div>
@@ -11,41 +8,37 @@
     </div>
     <div class="post" v-text="post"></div>
     <SocialPostComments
-      v-if="showComments" 
+      v-if="showComments"
       :comments="comments"
       @delete="onDeleted"
     />
-    
+
     <div class="interactions">
       <IconHeart />
       {{ interactions }}
       <IconCommunity />
       {{ commentsNumber }}
-      <button
-        v-show="hasComments"
-        @click="onShowCommentClick"
-      >
+      <button v-show="hasComments" @click="onShowCommentClick">
         Show Comments
       </button>
     </div>
   </div>
 </template>
 
-<script setup >
-import { onMounted, ref, computed } from 'vue';
-import SocialPostComments from './SocialPostComments.vue';
-import IconHeart from '../icons/IconHeart.vue';
-import IconCommunity from '../icons/IconCommunity.vue';
-import IconDelete from '../icons/IconDelete.vue';
+<script setup>
+import { onMounted, ref, computed } from "vue";
+import SocialPostComments from "./SocialPostComments.vue";
+import IconHeart from "../icons/IconHeart.vue";
+import IconCommunity from "../icons/IconCommunity.vue";
+import IconDelete from "../icons/IconDelete.vue";
 
-const showComments = ref(false); 
-const onShowCommentClick = () => { 
+const showComments = ref(false);
+const onShowCommentClick = () => {
   console.log("Showing comments");
-  showComments.value = !showComments.value; 
-}
+  showComments.value = !showComments.value;
+};
 
-
-const commentsNumber = computed( () => {
+const commentsNumber = computed(() => {
   return props.comments.length;
 });
 const props = defineProps({
@@ -55,39 +48,39 @@ const props = defineProps({
   post: String,
   comments: Array,
   likes: Number,
-  retweets: Number
+  retweets: Number,
 });
 
 const hasComments = computed(() => {
   return props.comments.length > 0;
 });
 
-const interactions = computed( ()=> {
+const interactions = computed(() => {
   const comments = props.comments.length;
   console.log(comments, props.likes, props.retweets);
   return comments + props.likes + props.retweets;
 });
 
-onMounted( () => {
+onMounted(() => {
   console.log(props.username);
 });
 
-const emit = defineEmits(['delete']);
+const emit = defineEmits(["delete"]);
 const onDeleteClick = () => {
-  emit('delete', 0);
-}
+  emit("delete", 0);
+};
 </script>
 
 <style lang="scss">
-.SocialPost{
-  margin-bottom:16px;
-  &__selected{
+.SocialPost {
+  margin-bottom: 16px;
+  &__selected {
     border: white solid 1px;
   }
   .header {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;;
+    margin-bottom: 8px;
   }
   .avatar {
     border-radius: 50%;
@@ -102,13 +95,13 @@ const onDeleteClick = () => {
     display: flex;
     font-weight: bold;
     margin-top: 8px;
-    gap:8px;
+    gap: 8px;
   }
   svg {
     width: 24px;
     height: 24px;
     fill: var(--color-input-soft);
-    cursor:pointer;
+    cursor: pointer;
   }
 }
 </style>
