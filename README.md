@@ -1,4 +1,7 @@
-# vue.js-for-beginners
+# Vue.js-3-for-Beginners
+
+[![Dependabot Updates](https://github.com/ibiscum/Vue.js-3-for-Beginners/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/ibiscum/Vue.js-3-for-Beginners/actions/workflows/dependabot/dependabot-updates)
+[![CodeQL Advanced](https://github.com/ibiscum/Vue.js-3-for-Beginners/actions/workflows/codeql.yml/badge.svg)](https://github.com/ibiscum/Vue.js-3-for-Beginners/actions/workflows/codeql.yml)
 
 This template should help get you started developing with Vue 3 in Vite.
 
