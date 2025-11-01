@@ -1,15 +1,13 @@
 <template>
-    <header>
-        <div v-html="logo" ></div>
-        <h1>Companion app</h1>
-        <a href="#">
-            Welcome {{ username }}
-        </a>
-    </header>
+  <header>
+    <div v-html="logo"></div>
+    <h1>Companion app</h1>
+    <a href="#"> Welcome {{ username }} </a>
+  </header>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 const username = ref("Zelig880");
 const logo = `<svg
   height="50"
@@ -24,16 +22,15 @@ const logo = `<svg
 
 <style lang="scss">
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    margin-bottom:24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin-bottom: 24px;
 
-    a span {
-        font-weight: bold;
-    }
+  a span {
+    font-weight: bold;
+  }
 }
-
 </style>

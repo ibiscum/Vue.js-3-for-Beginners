@@ -1,6 +1,6 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import TheHeader from './components/organisms/TheHeader.vue'
+import { RouterLink, RouterView } from "vue-router";
+import TheHeader from "./components/organisms/TheHeader.vue";
 </script>
 
 <template>
@@ -9,5 +9,4 @@ import TheHeader from './components/organisms/TheHeader.vue'
   <RouterView />
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
