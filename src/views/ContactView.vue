@@ -8,10 +8,8 @@
 </template>
 
 <script setup>
-import StaticTemplate from '../components/templates/StaticTemplate.vue'
-import ContactUs from '../components/organisms/ContactUs.vue'
+import StaticTemplate from "../components/templates/StaticTemplate.vue";
+import ContactUs from "../components/organisms/ContactUs.vue";
 </script>
 
-<style>
-
-</style>
+<style></style>
