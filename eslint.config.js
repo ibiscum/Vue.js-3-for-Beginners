@@ -18,5 +18,5 @@ export default defineConfig([
       globals: globals.browser 
     } 
   },
-  pluginVue.configs["flat/essential"],
+  pluginVue.configs["flat/recommended"],
 ]);

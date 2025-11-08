@@ -1,10 +1,10 @@
 <template>
   <header>
-    <div v-html="logo"></div>
+    <div v-html="logo" />
     <h1>Companion app</h1>
     <a href="#">
       Welcome
-      <span v-text="username"></span>
+      <span v-text="username" />
     </a>
   </header>
 </template>

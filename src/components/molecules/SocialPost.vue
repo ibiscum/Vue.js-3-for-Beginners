@@ -5,15 +5,31 @@
     @click="selected = !selected"
   >
     <div class="header">
-      <img class="avatar" :src="avatarSrc" />
-      <div class="name">{{ username }}</div>
-      <div class="userId">{{ userId }}</div>
+      <img
+        class="avatar"
+        :src="avatarSrc"
+      >
+      <div class="name">
+        {{ username }}
+      </div>
+      <div class="userId">
+        {{ userId }}
+      </div>
     </div>
-    <div class="post" v-text="post"></div>
-    <button v-show="comments.length > 0" @click="showComments = !showComments">
+    <div
+      class="post"
+      v-text="post"
+    />
+    <button
+      v-show="comments.length > 0"
+      @click="showComments = !showComments"
+    >
       Show Comments
     </button>
-    <SocialPostComments v-if="showComments" :comments="comments" />
+    <SocialPostComments
+      v-if="showComments"
+      :comments="comments"
+    />
   </div>
 </template>
 
