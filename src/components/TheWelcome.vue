@@ -1,5 +1,5 @@
 <script setup>
-import SocialPost from './molecules/SocialPost.vue';
+import SocialPost from "./molecules/SocialPost.vue";
 </script>
 
 <template>

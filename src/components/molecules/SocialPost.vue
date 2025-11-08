@@ -19,25 +19,25 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted } from "vue";
 
 const props = defineProps({
-  username: {type: String, default: 'John Doe'},
-  userId: {type: String, default: 'user01'},
-  avatarSrc: {type: String, default: 'https://i.pravatar.cc/40'},
-  post: {type: String, default: 'message'},
+  username: { type: String, default: "John Doe" },
+  userId: { type: String, default: "user01" },
+  avatarSrc: { type: String, default: "https://i.pravatar.cc/40" },
+  post: { type: String, default: "message" },
 });
-onMounted( () => {
+onMounted(() => {
   console.log(props.username);
 });
 </script>
 
 <style lang="scss">
-.SocialPost{
+.SocialPost {
   .header {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;;
+    margin-bottom: 8px;
   }
   .avatar {
     border-radius: 50%;
