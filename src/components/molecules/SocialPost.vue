@@ -5,16 +5,34 @@
     @click="onSelectedClick"
   >
     <div class="header">
-      <img class="avatar" :src="avatarSrc" />
-      <div class="name">{{ username }}</div>
-      <div class="userId">{{ userId }}</div>
+      <img
+        class="avatar"
+        :src="avatarSrc"
+      >
+      <div class="name">
+        {{ username }}
+      </div>
+      <div class="userId">
+        {{ userId }}
+      </div>
     </div>
-    <div class="post" v-text="post"></div>
-    <button v-show="hasComments" @click="onShowCommentClick">
+    <div
+      class="post"
+      v-text="post"
+    />
+    <button
+      v-show="hasComments"
+      @click="onShowCommentClick"
+    >
       Show Comments
     </button>
-    <SocialPostComments v-if="showComments" :comments="comments" />
-    <div class="interactions">Interactions: {{ interactions }}</div>
+    <SocialPostComments
+      v-if="showComments"
+      :comments="comments"
+    />
+    <div class="interactions">
+      Interactions: {{ interactions }}
+    </div>
   </div>
 </template>
 
@@ -33,9 +51,9 @@ const onShowCommentClick = () => {
   showComments.value = !showComments.value;
 };
 const props = defineProps({
-  username: String,
-  userId: Number,
-  avatarSrc: String,
+  username: { type: String, default: "John Doe" },
+  userId: { type: Number, default: 0 },
+  avatarSrc: { type: String, default: "https://i.pravatar.cc/100" },
   post: String,
   comments: Array,
   likes: Number,

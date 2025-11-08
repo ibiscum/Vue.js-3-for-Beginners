@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div v-html="logo"></div>
+    <div v-html="logo" />
     <h1>Companion app</h1>
     <a href="#"> Welcome {{ username }} </a>
   </header>

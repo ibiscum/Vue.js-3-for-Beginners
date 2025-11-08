@@ -1,22 +1,22 @@
 <template>
   <SocialPost
     :username="posts[0].username"
-    :userId="posts[0].userId"
-    :avatarSrc="posts[0].avatar"
+    :user-id="posts[0].userId"
+    :avatar-src="posts[0].avatar"
     :post="posts[0].post"
     :comments="posts[0].comments"
     :likes="posts[0].likes"
     :retweets="posts[0].retweets"
-  ></SocialPost>
+  />
   <SocialPost
     :username="posts[1].username"
-    :userId="posts[1].userId"
-    :avatarSrc="posts[1].avatar"
+    :user-id="posts[1].userId"
+    :avatar-src="posts[1].avatar"
     :post="posts[1].post"
     :comments="posts[1].comments"
     :likes="posts[1].likes"
     :retweets="posts[1].retweets"
-  ></SocialPost>
+  />
 </template>
 
 <script setup>
