@@ -1,14 +1,7 @@
 <template>
-  <div
-    class="SocialPost"
-    :class="{ SocialPost__selected: selected }"
-    @click="selected = !selected"
-  >
+  <div class="SocialPost" :class="{ SocialPost__selected: selected }" @click="selected = !selected">
     <div class="header">
-      <img
-        class="avatar"
-        :src="avatarSrc"
-      >
+      <img class="avatar" :src="avatarSrc">
       <div class="name">
         {{ username }}
       </div>
@@ -16,20 +9,11 @@
         {{ userId }}
       </div>
     </div>
-    <div
-      class="post"
-      v-text="post"
-    />
-    <button
-      v-show="comments.length > 0"
-      @click="showComments = !showComments"
-    >
+    <div class="post" v-text="post" />
+    <button v-show="comments.length > 0" @click="showComments = !showComments">
       Show Comments
     </button>
-    <SocialPostComments
-      v-if="showComments"
-      :comments="comments"
-    />
+    <SocialPostComments v-if="showComments" :comments="comments" />
   </div>
 </template>
 
@@ -57,15 +41,18 @@ onMounted(() => {
   &__selected {
     border: white solid 1px;
   }
+
   .header {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
   }
+
   .avatar {
     border-radius: 50%;
     margin-right: 12px;
   }
+
   .name {
     font-weight: bold;
     margin-right: 8px;
