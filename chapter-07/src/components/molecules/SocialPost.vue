@@ -54,11 +54,12 @@ const onShowCommentClick = () => {
 }
 
 const props = defineProps({
-  username: String,
-  id: Number,
-  avatarSrc: String,
-  post: String,
-  likes: Number
+  username: { type: String, default: 'Anonymous' },
+  selected: { type: Boolean, default: false },
+  id: { type: Number, default: 0 },
+  avatarSrc: { type: String, default: 'https://via.placeholder.com/40' },
+  post: { type: String, default: 'No post content' },
+  likes: { type: Number, default: 0 }
 });
 
 onMounted( () => {
