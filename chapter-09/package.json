@@ -9,8 +9,7 @@
     "test:unit": "vitest",
     "test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
     "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "lint": "eslint --fix"
   },
   "dependencies": {
     "@eslint/js": "^9.39.1",
@@ -27,7 +26,6 @@
     "eslint-plugin-cypress": "^5.2.0",
     "eslint-plugin-vue": "^10.5.1",
     "jsdom": "^27.1.0",
-    "prettier": "^3.6.2",
     "sass": "^1.93.3",
     "start-server-and-test": "^2.1.2",
     "vite": "^7.2.2",
