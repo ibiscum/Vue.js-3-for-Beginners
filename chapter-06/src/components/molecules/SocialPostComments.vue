@@ -1,10 +1,7 @@
 <template>
   <div class="SocialPostComments">
     <p>Comments:</p>
-    <div
-      v-for="(comment, index) in comments"
-      class="comment"
-    >
+    <div v-for="(comment, index) in comments" class="comment">
       <p>{{ comment }}</p>
       <IconDeleteVue />
     </div>
@@ -21,9 +18,11 @@ const props = defineProps({
 <style lang="scss">
 .SocialPostComments {
   padding-left: 24px;
+
   p {
     font-weight: bold;
   }
+
   .comment {
     display: flex;
     justify-content: space-between;
@@ -34,6 +33,7 @@ const props = defineProps({
     color: var(--color-background-soft);
     width: 75%;
   }
+
   svg {
     fill: var(--color-background-mute);
   }

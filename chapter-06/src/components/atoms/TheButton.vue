@@ -24,10 +24,12 @@ defineProps({
 button {
   width: v-bind(width);
 }
+
 .light {
   background-color: #1da1f2;
   color: white;
 }
+
 .dark {
   background-color: black;
   color: #1da1f2;

@@ -30,12 +30,14 @@ header {
   .span {
     display: flex;
   }
+
   a {
     font-size: 16px;
     line-height: 24px;
     margin-right: 8px;
     font-weight: bolder;
   }
+
   .settings {
     width: 16px;
     height: 16px;

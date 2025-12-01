@@ -1,13 +1,7 @@
 <template>
-  <div
-    class="SocialPost"
-    :class="{ SocialPost__selected: selected }"
-  >
+  <div class="SocialPost" :class="{ SocialPost__selected: selected }">
     <div class="header">
-      <img
-        class="avatar"
-        :src="avatarSrc"
-      >
+      <img class="avatar" :src="avatarSrc">
       <div class="name">
         {{ username }}
       </div>
@@ -16,25 +10,15 @@
       </div>
       <IconDelete @click="onDeleteClick" />
     </div>
-    <div
-      class="post"
-      v-text="post"
-    />
-    <SocialPostComments
-      v-if="showComments"
-      :comments="comments"
-      @delete="onDeleted"
-    />
+    <div class="post" v-text="post" />
+    <SocialPostComments v-if="showComments" :comments="comments" @delete="onDelete" />
 
     <div class="interactions">
       <IconHeart />
       {{ interactions }}
       <IconCommunity />
       {{ commentsNumber }}
-      <button
-        v-show="hasComments"
-        @click="onShowCommentClick"
-      >
+      <button v-show="hasComments" @click="onShowCommentClick">
         Show Comments
       </button>
     </div>
@@ -90,29 +74,35 @@ const onDeleteClick = () => {
 <style lang="scss">
 .SocialPost {
   margin-bottom: 16px;
+
   &__selected {
     border: white solid 1px;
   }
+
   .header {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
   }
+
   .avatar {
     border-radius: 50%;
     margin-right: 12px;
   }
+
   .name {
     font-weight: bold;
     margin-right: 8px;
     color: white;
   }
+
   .interactions {
     display: flex;
     font-weight: bold;
     margin-top: 8px;
     gap: 8px;
   }
+
   svg {
     width: 24px;
     height: 24px;

@@ -1,16 +1,7 @@
 <template>
-  <SocialPost
-    v-for="(post, index) in posts"
-    :key="post.userId"
-    :username="post.username"
-    :user-id="post.userId"
-    :avatar-src="post.avatar"
-    :post="post.post"
-    :comments="post.comments"
-    :likes="post.likes"
-    :retweets="post.retweets"
-    @delete="onDelete(index)"
-  />
+  <SocialPost v-for="(post, index) in posts" :key="post.userId" :username="post.username" :user-id="post.userId"
+    :avatar-src="post.avatar" :post="post.post" :comments="post.comments" :likes="post.likes" :retweets="post.retweets"
+    @delete="onDelete(index)" />
 </template>
 
 <script setup>
