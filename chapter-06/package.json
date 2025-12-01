@@ -1,0 +1,36 @@
+{
+  "name": "vue.js-for-beginners",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
+    "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "pinia": "^3.0.4",
+    "vue": "^3.5.24",
+    "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "@vue/test-utils": "^2.4.6",
+    "cypress": "^15.6.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-cypress": "^5.2.0",
+    "eslint-plugin-vue": "^10.5.1",
+    "jsdom": "^27.1.0",
+    "prettier": "^3.6.2",
+    "sass": "^1.93.3",
+    "start-server-and-test": "^2.1.2",
+    "vite": "^7.2.2",
+    "vitest": "^4.0.8"
+  }
+}
