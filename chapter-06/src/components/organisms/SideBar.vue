@@ -3,7 +3,9 @@
     <h2>Sidebar</h2>
     <button>Create Post</button>
     <div>Current time: {{ currentTime }}</div>
-    <button @click.once="onUpdateTimeClick">Update Time</button>
+    <button @click.once="onUpdateTimeClick">
+      Update Time
+    </button>
   </aside>
 </template>
 <script setup>

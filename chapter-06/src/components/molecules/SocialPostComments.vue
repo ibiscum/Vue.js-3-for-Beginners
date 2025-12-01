@@ -1,7 +1,10 @@
 <template>
   <div class="SocialPostComments">
     <p>Comments:</p>
-    <div v-for="(comment, index) in comments" class="comment">
+    <div
+      v-for="(comment, index) in comments"
+      class="comment"
+    >
       <p>{{ comment }}</p>
       <IconDeleteVue />
     </div>

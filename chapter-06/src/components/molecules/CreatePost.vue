@@ -1,7 +1,10 @@
 <template>
   <form>
     <h2>Create a Post</h2>
-    <textarea rows="4" cols="20"></textarea>
+    <textarea
+      rows="4"
+      cols="20"
+    />
     <button>Post</button>
   </form>
 </template>

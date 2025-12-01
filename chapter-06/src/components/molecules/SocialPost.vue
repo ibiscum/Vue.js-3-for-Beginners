@@ -1,12 +1,25 @@
 <template>
-  <div class="SocialPost" :class="{ SocialPost__selected: selected }">
+  <div
+    class="SocialPost"
+    :class="{ SocialPost__selected: selected }"
+  >
     <div class="header">
-      <img class="avatar" :src="avatarSrc" />
-      <div class="name">{{ username }}</div>
-      <div class="userId">{{ userId }}</div>
+      <img
+        class="avatar"
+        :src="avatarSrc"
+      >
+      <div class="name">
+        {{ username }}
+      </div>
+      <div class="userId">
+        {{ userId }}
+      </div>
       <IconDelete @click="onDeleteClick" />
     </div>
-    <div class="post" v-text="post"></div>
+    <div
+      class="post"
+      v-text="post"
+    />
     <SocialPostComments
       v-if="showComments"
       :comments="comments"
@@ -18,7 +31,10 @@
       {{ interactions }}
       <IconCommunity />
       {{ commentsNumber }}
-      <button v-show="hasComments" @click="onShowCommentClick">
+      <button
+        v-show="hasComments"
+        @click="onShowCommentClick"
+      >
         Show Comments
       </button>
     </div>
