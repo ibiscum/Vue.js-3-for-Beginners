@@ -10,12 +10,14 @@ defineProps({
 
 let firstName = ref("Simone");
 let secondName = ref("Cuomo");
-const fullName = computed( () => `${firstName.value} ${secondName.value}`);
+const fullName = computed(() => `${firstName.value} ${secondName.value}`);
 console.log(fullName);
 // output: Simone Cuomo
 firstName.value = "John";
 console.log(fullName);
 // output: John Cuomo
+
+const count = ref(0)
 </script>
 
 <template>
@@ -27,6 +29,7 @@ console.log(fullName);
       <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
     </h3>
   </div>
+  <button @click="count++">You clicked me {{ count }} times.</button>
 </template>
 
 <style scoped>
@@ -47,6 +50,7 @@ h3 {
 }
 
 @media (min-width: 1024px) {
+
   .greetings h1,
   .greetings h3 {
     text-align: left;
