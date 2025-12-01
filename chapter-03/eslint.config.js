@@ -5,12 +5,13 @@ import pluginCypress from "eslint-plugin-cypress/flat"
 import { defineConfig } from "eslint/config";
 
 export default defineConfig([
-  { 
+  {
     files: ["**/*.{js,mjs,cjs,vue}"],
     plugins: { js },
     extends: ["js/recommended"],
-    languageOptions: { globals: globals.browser } 
+    languageOptions: { globals: globals.browser }
   },
-  pluginVue.configs["flat/recommended"],
-  pluginCypress.configs.recommended,
+  js.configs.recommended,
+  ...pluginVue.configs['flat/essential'],
+  ...pluginCypress.configs.recommended,
 ]);

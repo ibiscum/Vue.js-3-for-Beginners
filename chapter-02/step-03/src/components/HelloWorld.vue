@@ -56,4 +56,8 @@ h3 {
     text-align: left;
   }
 }
+
+p {
+  color: red;
+}
 </style>
