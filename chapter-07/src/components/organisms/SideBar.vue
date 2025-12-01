@@ -1,12 +1,15 @@
 <template>
-    <aside>
-        <h2>Sidebar</h2>
-        <TheButton value="Create post" />
-        <div>
-            Current time: {{currentTime}}
-        </div>
-        <TheButton @click.once="onUpdateTimeClick" value="Update time" />
-    </aside>
+  <aside>
+    <h2>Sidebar</h2>
+    <TheButton value="Create post" />
+    <div>
+      Current time: {{ currentTime }}
+    </div>
+    <TheButton
+      value="Update time"
+      @click.once="onUpdateTimeClick"
+    />
+  </aside>
 </template>
 <script setup>
 import { ref } from 'vue';

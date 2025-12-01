@@ -1,9 +1,9 @@
 <template>
-    <button
-        :class="theme"
-    >
-     {{  value  }}
-    </button>
+  <button
+    :class="theme"
+  >
+    {{ value }}
+  </button>
 </template>
 <script setup>
 defineProps({
