@@ -1,9 +1,12 @@
 <template>
-    <form>
-        <h2>Create a Post</h2>
-        <textarea rows="4" cols="20"></textarea>
-        <TheButton value="post" />
-    </form>
+  <form>
+    <h2>Create a Post</h2>
+    <textarea
+      rows="4"
+      cols="20"
+    />
+    <TheButton value="post" />
+  </form>
 </template>
 <script setup>
 import TheButton from '../atoms/TheButton.vue';
