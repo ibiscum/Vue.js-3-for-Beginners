@@ -1,11 +1,18 @@
 <script setup>
 import { ref, computed } from "vue";
 
-defineProps({
+const props = defineProps({
   msg: {
     type: String,
     required: true,
   },
+  name: {
+    type: String,
+  },
+  size: {
+    type: String,
+    default: "medium",
+  }
 })
 
 let firstName = ref("Simone");
@@ -18,11 +25,22 @@ console.log(fullName);
 // output: John Cuomo
 
 const count = ref(0)
+
+const iconPath = computed( () => {
+  return `/assets/${props.name}.svg`;
+});
+
+const sizeClass = computed( () => {
+  return `${props.size}-icon`;
+});
+
+console.log(iconPath);
+console.log(sizeClass);
 </script>
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+    <h1 class="green">{{ props.msg }}</h1>
     <h3>
       You’ve successfully created a project with
       <a href="https://vite.dev/" target="_blank" rel="noopener">Vite</a> +
