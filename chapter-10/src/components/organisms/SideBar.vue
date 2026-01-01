@@ -15,6 +15,7 @@
     </template>
   </aside>
 </template>
+
 <script setup>
 import { ref, onBeforeMount } from "vue";
 import { RouterLink, useRouter } from "vue-router";
@@ -48,9 +49,11 @@ aside {
   display: flex;
   flex-direction: column;
   position: relative;
+
   &.sidebar__closed {
     width: 40px;
   }
+
   .sidebar__icon {
     position: absolute;
     right: 12px;
