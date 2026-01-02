@@ -3,12 +3,23 @@
     class="SocialPost" 
   >
     <div class="header">
-      <img class="avatar" :src="avatarSrc" />
-      <div class="name">{{ username }}</div>
-      <IconDelete @click="onDeleteClick" role="button" />
+      <img
+        class="avatar"
+        :src="avatarSrc"
+      >
+      <div class="name">
+        {{ username }}
+      </div>
+      <IconDelete
+        role="button"
+        @click="onDeleteClick"
+      />
     </div>
-    <div class="post" v-text="post"></div>
-    <Suspense v-if="showComments" >
+    <div
+      class="post"
+      v-text="post"
+    />
+    <Suspense v-if="showComments">
       <SocialPostComments
         :post-id="id"
         @delete="onDeleted"
@@ -22,16 +33,18 @@
       <IconHeart />
       {{ likes }}
       <TheButton
-        @click="onShowCommentClick"
         width="auto"
         theme="dark"
         data-cy="showCommentButton"
-      >Show comment</TheButton>
+        @click="onShowCommentClick"
+      >
+        Show comment
+      </TheButton>
     </div>
   </div>
 </template>
 
-<script setup >
+<script setup>
 import { onMounted, ref, computed } from 'vue';
 import SocialPostComments from './SocialPostComments.vue';
 import IconHeart from '../icons/IconHeart.vue';

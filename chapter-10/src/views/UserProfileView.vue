@@ -1,10 +1,17 @@
 <template>
   <section class="userView">
     <h2>User information</h2>
-    <template v-for="key in valuesToDisplay">
+    <template
+      v-for="key in valuesToDisplay"
+      :key="key"
+    >
       <label v-if="user[key]">
         {{ key }}
-        <input type="text" disabled :value="user[key]" />
+        <input
+          type="text"
+          disabled
+          :value="user[key]"
+        >
       </label>
     </template>
   </section>

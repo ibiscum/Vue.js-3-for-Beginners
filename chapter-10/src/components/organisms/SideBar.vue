@@ -1,16 +1,28 @@
 <template>
   <aside :class="{ sidebar__closed: closed }">
     <template v-if="closed">
-      <IconRightArrow class="sidebar__icon" @click="toggleSidebar" />
+      <IconRightArrow
+        class="sidebar__icon"
+        @click="toggleSidebar"
+      />
     </template>
     <template v-else>
       <h2>Sidebar</h2>
-      <IconLeftArrow class="sidebar__icon" @click="toggleSidebar" />
+      <IconLeftArrow
+        class="sidebar__icon"
+        @click="toggleSidebar"
+      />
       <TheButton>Create post</TheButton>
       <div>Current time: {{ currentTime }}</div>
-      <TheButton @click="onUpdateTimeClick">Update Time</TheButton>
-      <router-link to="privacy">Privacy</router-link>
-      <router-link to="about">About</router-link>
+      <TheButton @click="onUpdateTimeClick">
+        Update Time
+      </TheButton>
+      <router-link to="privacy">
+        Privacy
+      </router-link>
+      <router-link to="about">
+        About
+      </router-link>
       <a @click="navigateToPrivacy">Programmatic to privacy</a>
     </template>
   </aside>

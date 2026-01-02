@@ -1,18 +1,26 @@
 <template>
-    <aside :class="{ 'sidebar__closed': closed}">
-        <template v-if="closed">
-            <IconRightArrow class="sidebar__icon" @click="toggleSidebar" />
-        </template>
-        <template v-else>
-            <h2>Sidebar</h2>
-            <IconLeftArrow class="sidebar__icon" @click="toggleSidebar" />
-            <TheButton>Create post</TheButton>
-            <div>
-                Current time: {{currentTime}}
-            </div>
-            <TheButton @click="onUpdateTimeClick">Update Time</TheButton>
-        </template>
-    </aside>
+  <aside :class="{ 'sidebar__closed': closed}">
+    <template v-if="closed">
+      <IconRightArrow
+        class="sidebar__icon"
+        @click="toggleSidebar"
+      />
+    </template>
+    <template v-else>
+      <h2>Sidebar</h2>
+      <IconLeftArrow
+        class="sidebar__icon"
+        @click="toggleSidebar"
+      />
+      <TheButton>Create post</TheButton>
+      <div>
+        Current time: {{ currentTime }}
+      </div>
+      <TheButton @click="onUpdateTimeClick">
+        Update Time
+      </TheButton>
+    </template>
+  </aside>
 </template>
 <script setup>
 import { ref, onBeforeMount } from 'vue';

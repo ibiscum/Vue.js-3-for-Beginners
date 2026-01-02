@@ -6,15 +6,23 @@
       name="email"
       placeholder="Enter your email"
       rules="required|email"
-    ></Field>
-    <ErrorMessage as="span" name="email" class="error" />
+    />
+    <ErrorMessage
+      as="span"
+      name="email"
+      class="error"
+    />
     <label for="message">Message</label>
     <Field
       as="textarea"
       name="message"
       rules="required|min:10"
-    ></Field>
-    <ErrorMessage as="span" name="message" class="error">
+    />
+    <ErrorMessage
+      as="span"
+      name="message"
+      class="error"
+    >
       Please enter a message with at least 10 characters
     </ErrorMessage>
     <TheButton>Send</TheButton>

@@ -1,8 +1,12 @@
 <template>
-    <TheHeader/>
-    <h1><slot name="heading"></slot></h1>
-    <main><slot name="default"></slot></main>
-    <footer><slot name="footer">Copyright reserved to Vue.js for beginners</slot></footer>
+  <TheHeader />
+  <h1><slot name="heading" /></h1>
+  <main><slot name="default" /></main>
+  <footer>
+    <slot name="footer">
+      Copyright reserved to Vue.js for beginners
+    </slot>
+  </footer>
 </template>
 <script setup>
 import TheHeader from '../organisms/TheHeader.vue'

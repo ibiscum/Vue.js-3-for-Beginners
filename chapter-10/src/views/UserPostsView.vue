@@ -1,17 +1,17 @@
 <template>
   <SocialPost
-    v-for="(post, index) in posts"
-    :username="post.owner.firstName"
+    v-for="(post ) in posts"
     :id="post.id"
-    :avatarSrc="post.image"
+    :key="post.id"
+    :username="post.owner.firstName"
+    :avatar-src="post.image"
     :post="post.text"
     :likes="post.likes"
-    :key="post.id"
-  ></SocialPost>
+  />
 </template>
 
 <script setup>
-import { reactive, ref, watch } from "vue";
+import { reactive,} from "vue";
 import SocialPost from "../components/molecules/SocialPost.vue";
 import { useRoute } from "vue-router";
 

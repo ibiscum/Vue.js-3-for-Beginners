@@ -5,14 +5,17 @@
     </template>
     <template v-else>
       <p>Comments:</p>
-      <div v-for="{owner, message} in comments" class="comment">
+      <div
+        v-for="{owner, message} in comments"
+        class="comment"
+      >
         <p>{{ owner.firstName }}: <strong>{{ message }}</strong></p>
       </div>
     </template>
   </div>
 </template>
   
-<script setup >
+<script setup>
 import { reactive } from 'vue';
 const props = defineProps({
   postId: String

@@ -1,7 +1,11 @@
 <template>
   <StaticTemplate>
-    <template #heading>About Page</template>
-    <template #default> This is my content of my about page </template>
+    <template #heading>
+      About Page
+    </template>
+    <template #default>
+      This is my content of my about page
+    </template>
   </StaticTemplate>
 </template>
 

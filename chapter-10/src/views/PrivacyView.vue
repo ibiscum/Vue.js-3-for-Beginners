@@ -1,7 +1,11 @@
 <template>
   <StaticTemplate>
-    <template #heading>Privacy Page</template>
-    <template #default> This is the content of my privacy page </template>
+    <template #heading>
+      Privacy Page
+    </template>
+    <template #default>
+      This is the content of my privacy page
+    </template>
   </StaticTemplate>
 </template>
 

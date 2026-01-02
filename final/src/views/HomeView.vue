@@ -6,7 +6,7 @@ import TheHeader from '../components/organisms/TheHeader.vue'
 </script>
 
 <template>
-  <TheHeader/>
+  <TheHeader />
   <SideBar />
   <main>
     <CreatePost />

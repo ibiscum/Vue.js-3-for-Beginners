@@ -1,9 +1,11 @@
 <template>
   <TheHeader />
-  <h1><slot name="heading"></slot></h1>
-  <main><slot name="default"></slot></main>
+  <h1><slot name="heading" /></h1>
+  <main><slot name="default" /></main>
   <footer>
-    <slot name="footer">Copyright reserved to Vue.js for beginners</slot>
+    <slot name="footer">
+      Copyright reserved to Vue.js for beginners
+    </slot>
   </footer>
 </template>
 <script setup>

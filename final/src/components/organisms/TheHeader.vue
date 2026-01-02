@@ -1,16 +1,19 @@
 <template>
-    <header>
-        <TheLogo />
-        <h1>Companion app</h1>
-        <span>
-            <a href="#">
-                Welcome {{ username }}
-            </a>
-            <IconSettings class="icon" />
-            <IconFullScreen class="icon" @click="sidebarStore.toggleSidebar" />
-            <p>Sidebar state: {{ sidebarStore.friendlyState }}</p>
-        </span>
-    </header>
+  <header>
+    <TheLogo />
+    <h1>Companion app</h1>
+    <span>
+      <a href="#">
+        Welcome {{ username }}
+      </a>
+      <IconSettings class="icon" />
+      <IconFullScreen
+        class="icon"
+        @click="sidebarStore.toggleSidebar"
+      />
+      <p>Sidebar state: {{ sidebarStore.friendlyState }}</p>
+    </span>
+  </header>
 </template>
 
 <script setup>

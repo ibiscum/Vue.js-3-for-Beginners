@@ -1,6 +1,8 @@
 <template>
   <StaticTemplate>
-    <template #heading>Contact Us</template>
+    <template #heading>
+      Contact Us
+    </template>
     <template #default>
       <ContactUs />
     </template>

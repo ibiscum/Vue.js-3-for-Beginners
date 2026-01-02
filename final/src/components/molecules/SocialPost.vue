@@ -1,14 +1,26 @@
 <template>
   <div
-    class="SocialPost" 
+    class="SocialPost"
   >
     <div class="header">
-      <img class="avatar" :src="avatarSrc" @click="navigateToUser" />
-      <div class="name">{{ username }}</div>
-      <IconDelete @click="onDeleteClick" role="button" />
+      <img
+        class="avatar"
+        :src="avatarSrc"
+        @click="navigateToUser"
+      >
+      <div class="name">
+        {{ username }}
+      </div>
+      <IconDelete
+        role="button"
+        @click="onDeleteClick"
+      />
     </div>
-    <div class="post" v-text="post"></div>
-    <Suspense v-if="showComments" >
+    <div
+      class="post"
+      v-text="post"
+    />
+    <Suspense v-if="showComments">
       <SocialPostComments
         :post-id="id"
         @delete="onDeleted"
@@ -17,40 +29,42 @@
         fetching comments...
       </template>
     </Suspense>
-    
+
     <div class="interactions">
       <IconHeart />
       {{ likes }}
       <TheButton
-        @click="onShowCommentClick"
         width="auto"
         theme="dark"
         data-cy="showCommentButton"
-      >Show comment</TheButton>
+        @click="onShowCommentClick"
+      >
+        Show comment
+      </TheButton>
     </div>
   </div>
 </template>
 
-<script setup >
-import { onMounted, ref, computed } from 'vue';
+<script setup>
+import { onMounted, ref, } from 'vue';
 import SocialPostComments from './SocialPostComments.vue';
 import IconHeart from '../icons/IconHeart.vue';
 import IconDelete from '../icons/IconDelete.vue';
 import TheButton from '../atoms/TheButton.vue';
 import { useRouter } from 'vue-router';
 
-const showComments = ref(false); 
-const onShowCommentClick = () => { 
+const showComments = ref(false);
+const onShowCommentClick = () => {
   console.log("Showing comments");
-  showComments.value = !showComments.value; 
+  showComments.value = !showComments.value;
 }
 
 const props = defineProps({
-  username: String,
-  id: String,
-  avatarSrc: String,
-  post: String,
-  likes: Number
+  username: {type: String, default: "John Doe"},
+  id: {type: String, default: "user01"},
+  avatarSrc: {type: String, default: "https://i.pravatar.cc/40"},
+  post: {type: String, default: ""},
+  likes: {type: Number, default: 0}
 });
 const router = useRouter();
 const navigateToUser = () => {

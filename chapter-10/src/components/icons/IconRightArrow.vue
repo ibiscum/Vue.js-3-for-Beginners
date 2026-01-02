@@ -1,10 +1,10 @@
 <template>
   <svg
+    id="Layer_1"
     fill="#2c3e50"
     height="24px"
     width="24px"
     version="1.1"
-    id="Layer_1"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 330.002 330.002"

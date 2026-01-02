@@ -1,7 +1,13 @@
 <template>
-  <div class="SocialPost" :class="{ SocialPost__selected: selected }">
+  <div
+    class="SocialPost"
+    :class="{ SocialPost__selected: selected }"
+  >
     <div class="header">
-      <img class="avatar" :src="avatarSrc">
+      <img
+        class="avatar"
+        :src="avatarSrc"
+      >
       <div class="name">
         {{ username }}
       </div>
@@ -10,15 +16,25 @@
       </div>
       <IconDelete @click="onDeleteClick" />
     </div>
-    <div class="post" v-text="post" />
-    <SocialPostComments v-if="showComments" :comments="comments" @delete="onDelete" />
+    <div
+      class="post"
+      v-text="post"
+    />
+    <SocialPostComments
+      v-if="showComments"
+      :comments="comments"
+      @delete="onDelete"
+    />
 
     <div class="interactions">
       <IconHeart />
       {{ interactions }}
       <IconCommunity />
       {{ commentsNumber }}
-      <button v-show="hasComments" @click="onShowCommentClick">
+      <button
+        v-show="hasComments"
+        @click="onShowCommentClick"
+      >
         Show Comments
       </button>
     </div>
@@ -42,13 +58,13 @@ const commentsNumber = computed(() => {
   return props.comments.length;
 });
 const props = defineProps({
-  username: String,
-  userId: Number,
-  avatarSrc: String,
-  post: String,
-  comments: Array,
-  likes: Number,
-  retweets: Number,
+  username: {type: String, default: ""},
+  userId: {type: Number, default: 0},
+  avatarSrc: {type: String, default: ""},
+  post: {type: String, default: ""},
+  comments: {type: Array, default: () => []},
+  likes: {type: Number, default: 0},
+  retweets: {type: Number, default: 0},
 });
 
 const hasComments = computed(() => {

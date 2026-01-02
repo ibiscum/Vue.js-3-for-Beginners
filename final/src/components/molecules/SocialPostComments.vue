@@ -5,17 +5,21 @@
     </template>
     <template v-else>
       <p>Comments:</p>
-      <div v-for="{owner, message} in comments" class="comment">
+      <div
+        v-for="{owner, message} in comments"
+        :key="message"
+        class="comment"
+      >
         <p>{{ owner.firstName }}: <strong>{{ message }}</strong></p>
       </div>
     </template>
   </div>
 </template>
-  
-<script setup >
+
+<script setup>
 import { reactive } from 'vue';
 const props = defineProps({
-  postId: String
+  postId: {type: String, default: ""}
 });
 
 const comments = reactive([]);
@@ -34,7 +38,7 @@ const fetchComments = (postId) => {
 };
 await fetchComments(props.postId);
 </script>
-  
+
 <style lang="scss">
 .SocialPostComments{
   padding-left:24px;

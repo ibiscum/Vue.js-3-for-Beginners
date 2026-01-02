@@ -1,7 +1,10 @@
 <template>
   <div class="SocialPost">
     <div class="header">
-      <img class="avatar" :src="avatarSrc">
+      <img
+        class="avatar"
+        :src="avatarSrc"
+      >
       <div class="name">
         {{ username }}
       </div>

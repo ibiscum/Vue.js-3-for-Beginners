@@ -1,14 +1,14 @@
 <template>
-    <header>
-        <TheLogo />
-        <h1>Companion app</h1>
-        <span>
-            <a href="#">
-                Welcome {{ username }}
-            </a>
-            <IconSettings class="settings" />
-        </span>
-    </header>
+  <header>
+    <TheLogo />
+    <h1>Companion app</h1>
+    <span>
+      <a href="#">
+        Welcome {{ username }}
+      </a>
+      <IconSettings class="settings" />
+    </span>
+  </header>
 </template>
 
 <script setup>

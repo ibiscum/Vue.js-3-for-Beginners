@@ -1,15 +1,18 @@
 <template>
-    <form ref="createPostForm" @submit="createPost">
-        <h2>Create a Post</h2>
-        <textarea
-            rows="4"
-            cols="20"
-            ref="textareaRef"
-            required="true"
-            minlength="10"
-        ></textarea>
-        <TheButton>Create Post</TheButton>
-    </form>
+  <form
+    ref="createPostForm"
+    @submit="createPost"
+  >
+    <h2>Create a Post</h2>
+    <textarea
+      ref="textareaRef"
+      rows="4"
+      cols="20"
+      required="true"
+      minlength="10"
+    />
+    <TheButton>Create Post</TheButton>
+  </form>
 </template>
 <script setup>
 import TheButton from '../atoms/TheButton.vue';

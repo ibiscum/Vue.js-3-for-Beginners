@@ -1,9 +1,9 @@
 <template>
-    <button
-        :class="theme"
-    >
-     <slot>Click me</slot>
-    </button>
+  <button
+    :class="theme"
+  >
+    <slot>Click me</slot>
+  </button>
 </template>
 <script setup>
 defineProps({

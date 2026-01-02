@@ -1,26 +1,44 @@
 <template>
   <div class="SocialPost">
     <div class="header">
-      <img class="avatar" :src="avatarSrc" @click="navigateToUser" />
-      <div class="name">{{ username }}</div>
-      <IconDelete @click="onDeleteClick" role="button" />
+      <img
+        class="avatar"
+        :src="avatarSrc"
+        @click="navigateToUser"
+      >
+      <div class="name">
+        {{ username }}
+      </div>
+      <IconDelete
+        role="button"
+        @click="onDeleteClick"
+      />
     </div>
-    <div class="post" v-text="post"></div>
+    <div
+      class="post"
+      v-text="post"
+    />
     <Suspense v-if="showComments">
-      <SocialPostComments :post-id="id" @delete="onDeleted" />
-      <template #fallback> fetching comments... </template>
+      <SocialPostComments
+        :post-id="id"
+        @delete="onDeleted"
+      />
+      <template #fallback>
+        fetching comments...
+      </template>
     </Suspense>
 
     <div class="interactions">
       <IconHeart />
       {{ likes }}
       <TheButton
-        @click="onShowCommentClick"
         width="auto"
         theme="dark"
         data-cy="showCommentButton"
-        >Show comment</TheButton
+        @click="onShowCommentClick"
       >
+        Show comment
+      </TheButton>
     </div>
   </div>
 </template>

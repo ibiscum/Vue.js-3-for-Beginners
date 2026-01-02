@@ -1,14 +1,14 @@
 <template>
   <SocialPost
     v-for="(post, index) in posts"
-    :username="post.owner.firstName"
     :id="post.id"
-    :avatarSrc="post.image"
+    :key="post.id"
+    :username="post.owner.firstName"
+    :avatar-src="post.image"
     :post="post.text"
     :likes="post.likes"
-    :key="post.id"
     @delete="removePost(index)"
-  ></SocialPost>
+  />
 </template>
   
 <script setup>

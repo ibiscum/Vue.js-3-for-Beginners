@@ -1,22 +1,38 @@
 <template>
-    <aside :class="{ 'sidebar__closed': sidebarStore.closed}">
-        <template v-if="sidebarStore.closed">
-            <IconRightArrow class="sidebar__icon" @click="sidebarStore.toggleSidebar" />
-        </template>
-        <template v-else>
-            <h2>Sidebar</h2>
-            <IconLeftArrow class="sidebar__icon" @click="sidebarStore.toggleSidebar" />
-            <TheButton @click="postsStore.toggleInProgress">Create post</TheButton>
-            <div>
-                Current time: {{currentTime}}
-            </div>
-            <TheButton @click="onUpdateTimeClick">Update Time</TheButton>
-            <router-link to="privacy">Privacy</router-link>
-            <router-link to="about">About</router-link>
-            <router-link to="contact">Contact Us</router-link>
-            <a @click="navigateToPrivacy">Programmatic to privacy</a>
-        </template>
-    </aside>
+  <aside :class="{ 'sidebar__closed': sidebarStore.closed}">
+    <template v-if="sidebarStore.closed">
+      <IconRightArrow
+        class="sidebar__icon"
+        @click="sidebarStore.toggleSidebar"
+      />
+    </template>
+    <template v-else>
+      <h2>Sidebar</h2>
+      <IconLeftArrow
+        class="sidebar__icon"
+        @click="sidebarStore.toggleSidebar"
+      />
+      <TheButton @click="postsStore.toggleInProgress">
+        Create post
+      </TheButton>
+      <div>
+        Current time: {{ currentTime }}
+      </div>
+      <TheButton @click="onUpdateTimeClick">
+        Update Time
+      </TheButton>
+      <router-link to="privacy">
+        Privacy
+      </router-link>
+      <router-link to="about">
+        About
+      </router-link>
+      <router-link to="contact">
+        Contact Us
+      </router-link>
+      <a @click="navigateToPrivacy">Programmatic to privacy</a>
+    </template>
+  </aside>
 </template>
 <script setup>
 import { ref, onBeforeMount } from 'vue';
