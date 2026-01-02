@@ -1,7 +1,14 @@
 <template>
-  <div class="SocialPost" :class="{ SocialPost__selected: selected }" @click="selected = !selected">
+  <div
+    class="SocialPost"
+    :class="{ SocialPost__selected: selected }"
+    @click="selected = !selected"
+  >
     <div class="header">
-      <img class="avatar" :src="avatarSrc">
+      <img
+        class="avatar"
+        :src="avatarSrc"
+      >
       <div class="name">
         {{ username }}
       </div>
@@ -9,11 +16,20 @@
         {{ userId }}
       </div>
     </div>
-    <div class="post" v-text="post" />
-    <button v-show="comments.length > 0" @click="showComments = !showComments">
+    <div
+      class="post"
+      v-text="post"
+    />
+    <button
+      v-show="comments.length > 0"
+      @click="showComments = !showComments"
+    >
       Show Comments
     </button>
-    <SocialPostComments v-if="showComments" :comments="comments" />
+    <SocialPostComments
+      v-if="showComments"
+      :comments="comments"
+    />
   </div>
 </template>
 
@@ -24,11 +40,11 @@ import SocialPostComments from "./SocialPostComments.vue";
 const selected = ref(false);
 const showComments = ref(false);
 const props = defineProps({
-  username: String,
-  userId: Number,
-  avatarSrc: String,
-  post: String,
-  comments: Array,
+  username: {type: String, default: "John_Doe"},
+  userId: {type: Number, required: true},
+  avatarSrc: {type: String, default: "https://api.dicebear.com/9.x/bottts-neutral/svg?seed=Sara"},
+  post: {type: String, required: true},
+  comments: {type: Array, default: () => []},
 });
 
 onMounted(() => {

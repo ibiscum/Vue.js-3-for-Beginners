@@ -1,7 +1,10 @@
 <template>
   <div>
     <p>Comments:</p>
-    <div v-for="(comment, index) in comments">
+    <div
+      v-for="(comment, index) in props.comments"
+      :key="index"
+    >
       <strong>This is comment number {{ index }}</strong>
       <p>{{ comment }}</p>
     </div>
@@ -10,7 +13,7 @@
 
 <script setup>
 const props = defineProps({
-  comments: Array,
+  comments: {type: Array, default: () => []},
 });
 </script>
 
